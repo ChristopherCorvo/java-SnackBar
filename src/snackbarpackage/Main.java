@@ -32,18 +32,34 @@ public class Main
 		
 		// Jane buys 3 of snack 4 (soda)
 
-		 //total cost of 3 items
-						   // reduce quantity of snack 4
 		c1.buySnacks(s4.getTotalCost(3));
 
 
+		//total cost of 3 items
+
+		System.out.println("total cost of 3 items " + s4.getTotalCost(3));
+
+
+		// reduce quantity of snack 4
+
+		s4.buySnack(3);
+
+		
+		System.out.println("New Quantity of Soda " + s4.getQuantity());
+
+
 		// subtract total cost from Jane's Cash On Hand
-		// reduce quantity from Snack 4
+
+		System.out.println("subtract total cost from Jane's Cash On Hand " + (c1.getCashOnHand()));
+		
 		
 		// Print Customer 1 (Jane) Cash on hand.
-
+		
+		
 
 		// Print quantity of snack 4 (Soda).
+
+		// System.out.println(s4.getQuantity());
 
 
 		// Customer 1 (Jane) buys 1 of snack 3 (Pretzel).

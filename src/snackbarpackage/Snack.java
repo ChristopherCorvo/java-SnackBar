@@ -12,7 +12,7 @@ public class Snack
 	private double cost;
 	private int vendingMachineId;
 
-	public Snack(String name, int quantity, double cost)
+	public Snack(String name, int quantity, double cost) // constructor function
 	{
 		maxId++;
 		id = maxId;
@@ -105,9 +105,9 @@ public class Snack
 
 	// buy snack when given how many to buy
 
-	public int buySnack(int numOfPurchase )
+	public void buySnack(int numberPurchased )
 	{
-		return setQuantity(numOfPurchase);
+		this.quantity -= numberPurchased;
 	}
 
 

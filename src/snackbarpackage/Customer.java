@@ -59,9 +59,9 @@ public class Customer
 	
 	// buy snacks. Given the total cost of the snacks to be purchased, reduce the cash on hand by that amount
 
-	public double buySnacks(double total)
+	public void buySnacks(double total)
 	{
-		return getCashOnHand() - total;
+		this.cashOnHand -= total;
 	}
 
 }

@@ -12,21 +12,19 @@ public class Snack
 	private double cost;
 	private int vendingMachineId;
 
+	// ------- Constructor ---------
 	public Snack(String name, int quantity, double cost) // constructor function
 	{
+		// These two lines of code generate a new id
 		maxId++;
 		id = maxId;
 
 		this.name = name;
 		this.quantity = quantity;
 		this.cost = cost;
-		this.vendingMachineId = vendingMachineId;
-
 	}
 
-	
-
-	// ------- Getter Methods -----------
+	// ------- Getters & Setter Methods -----------
 
 
 	public int getId()
@@ -43,11 +41,22 @@ public class Snack
 
 	}
 
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+
+
 	public double getCost()
 	{
 
 		return cost;
 
+	}
+
+	public void setCost(double cost)
+	{
+		this.cost = cost;
 	}
 
 	public int getVendingMachineId()
@@ -57,12 +66,22 @@ public class Snack
 
 	}
 
+	public void setVendingMachineId(int vendingMachineId)
+	{
+		this.vendingMachineId = vendingMachineId;
+	}
+
+
 	public int getQuantity()
 	{
 
 		return quantity;
 
 	}
+
+	
+
+	// ------- additional Methods ---------
 
 	public double getTotalCost(int numberPurchased)
 	{
@@ -71,43 +90,15 @@ public class Snack
 
 	}
 
-	// ------- Setter Methods ----------
-
-	public void setName(String name)
+	public void addQuantity(int addQuantity)
 	{
-		this.name = name;
-	};
-
-	public void setCost(double cost)
-	{
-		this.cost = cost;
-	};
-
-	public void setVendingMachineId(int vendingMachineId)
-	{
-		this.vendingMachineId = vendingMachineId;
-	};
-
-	public void setQuantity(int quantity)
-	{
-		this.quantity = quantity;
+		this.quantity += addQuantity;
 	}
 
 
-	// ------- additional Methods ---------
-
-	// add quantity when given how many to add
-
-	// public addQuantity() 
-	// {
-
-	// }
-
-	// buy snack when given how many to buy
-
-	public void buySnack(int numberPurchased )
+	public void buySnack(int buyQuantity)
 	{
-		this.quantity -= numberPurchased;
+		this.quantity -= buyQuantity;
 	}
 
 

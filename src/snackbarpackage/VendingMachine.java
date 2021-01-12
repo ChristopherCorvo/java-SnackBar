@@ -19,7 +19,7 @@ public class VendingMachine
 		this.name = name;
 	}
 
-	// --------- Getter Methods ----------
+	// --------- Getters & Setter Methods ----------
 	public int getId()
 	{
 		return id;
@@ -30,12 +30,9 @@ public class VendingMachine
 		return name;
 	}
 
-	// --------- Setter Methods ----------
-
 	public void setName(String name)
 	{
 		this.name = name;
 	}
-
 
 }

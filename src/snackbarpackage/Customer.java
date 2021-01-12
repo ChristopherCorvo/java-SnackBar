@@ -24,7 +24,7 @@ public class Customer
 
 	}
 
-	// ------ Getter Methods -----
+	// ------ Getter & Setter Methods -----
 
 	public int getId()
 	{
@@ -36,32 +36,37 @@ public class Customer
 		return name;
 	}
 
-	public double getCashOnHand()
-	{
-		return cashOnHand;
-	}
-	
-	// ------ Setter Methods --------
-
 	public void setName(String name)
 	{
 		this.name = name;
 	}
+
+	public double getCashOnHand()
+	{
+		return cashOnHand;
+	}
+
+	public void setCashOnHand(double cashOnHand)
+	{
+		this.cashOnHand = cashOnHand;
+	}
+	
 	
 	// ------ Additional Methods
 
-	// add cash to cash on hand
 
-	public double addCashToCashOnHand(double cash){
+	public void addCashToCashOnHand(double cash)
+	{
 
-		return getCashOnHand() + cash;
+		setCashOnHand(getCashOnHand() + cash);
 	}
 	
 	// buy snacks. Given the total cost of the snacks to be purchased, reduce the cash on hand by that amount
 
-	public void buySnacks(double total)
+	public void buySnacks(double totalCostOfSnacks)
 	{
-		this.cashOnHand -= total;
+
+		setCashOnHand(getCashOnHand() - totalCostOfSnacks);
 	}
 
 }
